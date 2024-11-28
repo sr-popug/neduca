@@ -1,0 +1,211 @@
+.issue-page {
+  margin-left: -15vw;
+  width: 80vw;
+
+  .head {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      margin-top: 2px;
+      color: rgba(255, 255, 255, 0.439);
+    }
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+
+    .left {
+      width: 50%;
+
+      nav {
+        display: flex;
+        margin-bottom: 1rem;
+        ul {
+          display: flex;
+          gap: 1rem;
+          list-style: none;
+          li {
+            input {
+              position: absolute;
+              z-index: -1;
+              width: 0;
+              height: 0;
+              opacity: 0;
+
+              &:checked + label {
+                color: #ff4c2b;
+                border-color: #ff4c2b;
+              }
+            }
+            label {
+              display: block;
+              padding: 0.5rem 2rem;
+              border: 2px solid #2d384a;
+
+              font-size: 1.5rem;
+              text-align: center;
+
+              border-radius: 1rem;
+              background-color: #2d384a;
+              transition: all 0.3s ease;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #1e2631;
+                border-color: #1e2631;
+              }
+            }
+          }
+        }
+      }
+      .instructions {
+        .text {
+          padding: 2rem;
+          background-color: #2d384a;
+          border-radius: 2rem;
+
+          p {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            span {
+              background-color: #0818267a;
+              border-radius: 5px;
+              padding: 2px 5px;
+            }
+          }
+          .code {
+            background: #0818267a;
+
+            border-radius: 5px;
+            .left-elem {
+              display: none;
+            }
+            pre {
+              padding: 2px;
+              code {
+                padding: 2px;
+                background: none;
+              }
+            }
+          }
+        }
+        .example {
+          .code {
+            background: #2d384a;
+
+            border-radius: 20px;
+            .left-elem {
+              display: none;
+            }
+            pre {
+              padding: 20px;
+              code {
+                padding: 0;
+                background: none;
+                text-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
+      .output {
+        background-color: #2d384a;
+        padding: 2rem;
+        border-radius: 2rem;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            &::before {
+              content: '»';
+              font-size: 2rem;
+              color: #2bff32;
+              margin-right: 1rem;
+            }
+            &.error {
+              &::before {
+                color: #ff4c2b;
+              }
+            }
+            span {
+              background-color: #0818267a;
+              border-radius: 5px;
+              padding: 2px 5px;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 48%;
+
+      .decision {
+        width: 100%;
+        background-color: #2d384a;
+        border-radius: 2rem;
+        overflow: hidden;
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 10px;
+          padding-bottom: 10px;
+
+          h3 {
+            margin-top: 8px;
+            font-size: 18px;
+          }
+
+          button.change-theme {
+            padding: 1rem 3rem;
+            margin-top: 1rem;
+            margin-right: 10px;
+            border: 2px solid #1e2631;
+
+            font-size: 1.5rem;
+
+            border-radius: 1rem;
+            background-color: #1e2631;
+            transition: all 0.3s ease;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+              border-color: #ff4c2b;
+              color: #ff4c2b;
+            }
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        gap: 2rem;
+        button {
+          padding: 1rem 3rem;
+          margin-top: 1rem;
+          border: 2px solid #2d384a;
+
+          font-size: 1.5rem;
+
+          border-radius: 1rem;
+          background-color: #2d384a;
+          transition: all 0.3s ease;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #1e2631;
+            border-color: #1e2631;
+          }
+        }
+      }
+    }
+  }
+}

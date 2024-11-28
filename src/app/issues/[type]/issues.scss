@@ -1,0 +1,180 @@
+.issues-page {
+  .main {
+    display: flex;
+
+    border: 2px solid #ff4c2b;
+    border-radius: 20px;
+    background-color: #081826;
+    overflow: hidden;
+    .go-block {
+      background: linear-gradient(
+        180deg,
+        rgba(8, 24, 38, 1) 0%,
+        rgba(255, 75, 43, 0.364) 100%
+      );
+      padding: 20px;
+      border-right: #ff4b2b21 2px solid;
+
+      .difficult-choose {
+        .input-block {
+          input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &:checked + label {
+              color: #ff4c2b;
+              border-color: #ff4c2b;
+            }
+          }
+          label {
+            display: block;
+            height: 50px;
+            width: 28rem;
+            padding: 1rem 3rem;
+            border: 2px solid #2d384a;
+
+            font-size: 2rem;
+            text-align: center;
+            font-family: Made;
+
+            border-radius: 2rem;
+            background-color: #2d384a;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #1e2631;
+              border-color: #1e2631;
+            }
+          }
+        }
+        button {
+          margin-top: 55px;
+          width: 280px;
+          display: block;
+          height: 50px;
+          width: 28rem;
+          padding: 1rem 3rem;
+          border: none;
+
+          font-size: 2rem;
+          text-align: center;
+          font-family: Made;
+          color: white;
+
+          border-radius: 2rem;
+          background-color: #ff4c2b;
+          transition: all 0.3s ease;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #b1331d;
+          }
+        }
+      }
+    }
+    .quest {
+      padding: 20px;
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+
+        h3 {
+          font-size: 2rem;
+          font-family: Made;
+        }
+      }
+      .quest-texts {
+        position: relative;
+        max-height: 200px;
+        overflow: hidden;
+
+        .quest-text {
+          margin-bottom: 13px;
+          font-size: 1.4rem;
+          text-align: justify;
+          span {
+            background-color: #040d15;
+            border-radius: 5px;
+            padding: 2px 5px;
+          }
+        }
+        .background {
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          position: absolute;
+          z-index: 2;
+
+          background: linear-gradient(
+            0deg,
+            rgba(8, 24, 38, 1) 0%,
+            rgba(255, 75, 43, 0) 100%
+          );
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        button.another-issue {
+          margin-top: 20px;
+          border: none;
+          padding: 10px 30px;
+
+          font-size: 16px;
+          color: white;
+
+          cursor: pointer;
+          border-radius: 20px;
+          background-color: #2d384a;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #1e2631;
+          }
+        }
+      }
+    }
+  }
+  .types-choose {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .type {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      height: 50px;
+      padding: 1rem 3rem;
+      border: 2px solid #081826;
+
+      font-size: 2rem;
+      text-align: center;
+      font-family: Made;
+      color: white;
+      text-decoration: none;
+
+      border-radius: 2rem;
+      background-color: #081826;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &.active {
+        border-color: #ff4c2b;
+      }
+      &:hover {
+        background-color: #05101a;
+        border-color: #05101a;
+      }
+      p {
+        text-wrap: nowrap;
+      }
+    }
+  }
+}

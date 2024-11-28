@@ -1,0 +1,89 @@
+.keyboard-home {
+  h1 {
+    font-size: 3.2rem;
+    font-family: Made;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+  .modes-list {
+    list-style: none;
+    .mode {
+      margin-bottom: 2rem;
+      padding: 2rem;
+
+      border-radius: 20px;
+      background-color: #2d384a;
+
+      h2 {
+        margin-bottom: 3px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        font-size: 2.4rem;
+        font-family: Made;
+      }
+      p.description {
+        max-width: 58rem;
+        margin-bottom: 8px;
+        font-size: 1.6rem;
+        color: #d2d2d2;
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+        flex-wrap: wrap-reverse;
+
+        a {
+          padding: 10px 80px;
+          border-radius: 20px;
+          border: 1px solid white;
+
+          text-transform: uppercase;
+          font-size: 1.6rem;
+          color: white;
+          text-decoration: none;
+
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: white;
+            color: #081826;
+          }
+        }
+        p {
+          opacity: 0.5;
+          color: #d2d2d2;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .what-is {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      h3 {
+        max-width: 46rem;
+        margin-bottom: 1.6rem;
+
+        font-size: 2.4rem;
+        font-family: Made;
+      }
+      p {
+        font-size: 1.6rem;
+        max-width: 46rem;
+        text-align: justify;
+      }
+    }
+    img {
+      border-radius: 20px;
+      width: 46rem;
+      height: 35rem;
+    }
+  }
+}

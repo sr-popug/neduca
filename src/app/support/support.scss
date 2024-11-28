@@ -1,0 +1,64 @@
+.support-page {
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-family: Made;
+  }
+
+  .block {
+    margin-top: 3rem;
+    h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-family: Made;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+    ol {
+      padding-left: 35px;
+      li {
+        margin-top: 10px;
+        font-size: 1.4rem;
+
+        span {
+          padding: 2px 5px;
+          border-radius: 5px;
+
+          background-color: rgb(6, 19, 31);
+          font-family: Consolas;
+        }
+      }
+    }
+  }
+  .block-links {
+    .links {
+      margin-top: 1rem;
+      display: grid;
+      flex-direction: column;
+      gap: 1rem;
+      flex-wrap: wrap;
+      width: fit-content;
+
+      a {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 5px 2rem;
+
+        color: white;
+        text-decoration: none;
+
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-color: rgb(6, 19, 31);
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

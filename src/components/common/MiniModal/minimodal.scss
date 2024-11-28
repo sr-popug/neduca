@@ -1,0 +1,36 @@
+.mini-modal {
+  position: absolute;
+  z-index: 100;
+  right: 5rem;
+  top: -200px;
+  border: 3px solid transparent;
+  padding: 1.5rem;
+  min-height: 30px;
+  min-width: 80px;
+  max-width: 250px;
+
+  font-size: 1.8rem;
+
+  transition: all 0.3s ease;
+  background: rgb(8, 24, 38);
+  border-image: linear-gradient(180deg, rgb(78, 23, 13) 0%, #ff4b2b8c 100%);
+  border-image-slice: 1;
+
+  &.active {
+    animation: miniModal 5s ease;
+  }
+}
+@keyframes miniModal {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(220px);
+  }
+  90% {
+    transform: translateY(220px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
