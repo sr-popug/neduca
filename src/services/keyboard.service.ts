@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react'
 class KeyboardService {
   // первичная генирация слов
   firstGenerateWords(
-    array: String[],
+    array: string[],
     farther: React.RefObject<HTMLSpanElement>,
     now: React.RefObject<HTMLSpanElement>
   ) {

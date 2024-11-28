@@ -69,10 +69,8 @@ class IssuesService {
     }
 
     this.shuffle(testValues).forEach(testValue => {
-      const parseOutput: Function = new Function(
-        'return (' + value + `)(${testValue})`
-      )
-      const parseTestText: Function = new Function(
+      const parseOutput = new Function('return (' + value + `)(${testValue})`)
+      const parseTestText = new Function(
         'return (' + testText + `)(${testValue})`
       )
       if (parseOutput(testValue) == parseTestText(testValue)) {
