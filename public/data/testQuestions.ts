@@ -69,7 +69,8 @@ alert( x++ );`,
         option: 'Равен undefined.',
       },
     ],
-    explanation: '',
+    explanation:
+      'Прототип функции — это обычный объект, независимо от её тела.',
   },
   {
     quest: 'Чему равно <span>2 && 1 && null && 0 && undefined</span> ?',
@@ -100,7 +101,7 @@ alert( x++ );`,
         option: 'false',
       },
     ],
-    explanation: '',
+    explanation: 'Оператор <span>&&</span> возвращает первое ложное значение.',
   },
   {
     quest:
