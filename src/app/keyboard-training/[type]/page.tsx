@@ -2,12 +2,12 @@
 import KeyboardService from '@/services/keyboard.service'
 import { usePathname } from 'next/navigation'
 import { useLayoutEffect, useRef, useState } from 'react'
-import { keyboard } from '../../../../public/data/keyboards-ids'
 import {
   javaScriptWords,
   nextWords,
   reactWords,
 } from '../../../../public/data/words'
+import { keyboard } from '../../../configs/keyboards-ids'
 import './training.scss'
 
 export default function Page() {
@@ -24,7 +24,14 @@ export default function Page() {
   const keyboardDiv = useRef(null)
   const KeyService = new KeyboardService()
   const type = usePathname().split('/')[2]
+
   useLayoutEffect(() => {
+    window.addEventListener('keydown', e => {
+      if (e.key == ' ' && e.target === document.body) {
+        e.preventDefault()
+      }
+    })
+
     // первая генерация слов
     switch (type) {
       case 'react':
@@ -65,7 +72,7 @@ export default function Page() {
     <article className='training'>
       <h1>клавиатурный Тренажёр по {typeName}</h1>
       <article className='top'>
-        {/* Бегущая строка */}
+        {/* Бегущая строка c набираемым текстом */}
         <section className='stroke'>
           <div
             className='text'
@@ -76,7 +83,7 @@ export default function Page() {
             <span ref={farther} className='farther'></span>
           </div>
         </section>
-        {/* скорость ввода, времяЮ ошибки ввода */}
+        {/* скорость ввода, время ошибки ввода */}
         <section className='info'>
           <article className='text-info'>
             <article className='time'>{time} </article>
@@ -96,6 +103,7 @@ export default function Page() {
               key={letter.id}
               className={`button ${letter.code}`}
               id={letter.sim}
+              style={{ backgroundColor: letter.color }}
             >
               {letter.sim}
             </div>
@@ -105,8 +113,3 @@ export default function Page() {
     </article>
   )
 }
-window.addEventListener('keydown', e => {
-  if (e.key == ' ' && e.target === document.body) {
-    e.preventDefault()
-  }
-})

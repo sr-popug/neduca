@@ -1,8 +1,9 @@
 import { Difficult, issuesI, testCode } from '@/types/issuesTypes'
 import { Dispatch, SetStateAction } from 'react'
-import issuesJs, { issuesReact, issuesTS } from '../../public/data/issues'
+import issuesJs, { issuesReact } from '../../public/data/issues'
 
 class IssuesService {
+  // перемешивание массива
   shuffle(array: Array<any>) {
     const cloneArray = array.slice()
     let currentIndex = cloneArray.length
@@ -16,6 +17,7 @@ class IssuesService {
     }
     return cloneArray.splice(0, 5)
   }
+  // получение массива по типу
   issuesType(type: string) {
     if (type == 'js') {
       return issuesJs
@@ -23,13 +25,13 @@ class IssuesService {
     if (type == 'react') {
       return issuesReact
     }
-    if (type == 'ts') {
-      return issuesTS
-    }
   }
+  // определение типа
   typeDeterminant(path: string) {
     return path.split('/')[2]
   }
+
+  // выбор вопроса
   setIssue(
     difficult: Difficult,
     type: string,
@@ -38,7 +40,7 @@ class IssuesService {
   ) {
     const arrayOfThisType =
       this.issuesType(type)
-        ?.filter(el => el.difficulty == difficult)
+        ?.filter((el: issuesI) => el.difficulty == difficult)
         .filter((el: issuesI) => {
           if (el.id) return el.id !== prevId
           return true
@@ -48,9 +50,12 @@ class IssuesService {
       arrayOfThisType[Math.floor(Math.random() * arrayOfThisType?.length)]
     )
   }
+  // выбор вопроса на странице вопроса
   setPageIssue(id: number, type: string) {
-    return this.issuesType(type)?.find(el => el.id == id)
+    return this.issuesType(type)?.find((el: issuesI) => el.id == id)
   }
+
+  // тест введенного пользователем кода
   testCode(
     setInstructionsActive: Dispatch<SetStateAction<boolean>>,
     output: React.RefObject<HTMLInputElement>,

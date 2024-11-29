@@ -54,14 +54,14 @@ export default function Tests() {
             <Image
               width={30}
               height={30}
-              alt='next'
-              src='/images/next-logo.svg'
+              alt='typescript'
+              src='/images/ts-logo.svg'
             />{' '}
-            NextJS
+            TypeScript
           </h2>
 
           <section className='bottom'>
-            <Link href='/tests/next'>НАЧАТЬ!</Link>
+            <Link href='/tests/ts'>НАЧАТЬ!</Link>
             <p>
               <strong>134</strong> теоретических вопроса | <strong>31</strong>{' '}
               вопрос по коду{' '}

@@ -83,9 +83,10 @@ export default function Page() {
           </header>
 
           <article className='quest-texts'>
-            {issue?.quest.map(el => {
+            {issue?.quest.map((el, i) => {
               return (
                 <p
+                  key={i}
                   dangerouslySetInnerHTML={{ __html: el.text }}
                   className='quest-text'
                 ></p>
@@ -114,7 +115,7 @@ export default function Page() {
           <p>Задачи JavaScript</p>
         </Link>
 
-        <Link
+        {/* <Link
           href='/issues/ts'
           className={`type ${path == '/issues/ts' ? 'active' : ''}`}
         >
@@ -125,7 +126,7 @@ export default function Page() {
             src='/images/ts-logo.svg'
           />
           <p>Задачи TypeScript</p>
-        </Link>
+        </Link> */}
 
         <Link
           href='/issues/react'

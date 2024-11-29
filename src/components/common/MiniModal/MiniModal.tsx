@@ -5,5 +5,5 @@ import './minimodal.scss'
 
 export default function MiniModal() {
   const str = useMiniModalStore(state => state.str)
-  return <div className='mini-modal'>{str}</div>
+  return <output className='mini-modal'>{str}</output>
 }

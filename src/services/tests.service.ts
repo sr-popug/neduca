@@ -2,11 +2,12 @@ import { answerI, question } from '@/types/testTypes'
 import { Dispatch, SetStateAction } from 'react'
 import {
   testQuestionsJS,
-  testQuestionsNext,
   testQuestionsReact,
+  testQuestionsTS,
 } from '../../public/data/testQuestions'
 
 class TestsService {
+  // перемешивание массива
   shuffle(array: question[]) {
     let currentIndex = array.length
     while (currentIndex != 0) {
@@ -20,6 +21,7 @@ class TestsService {
     return array.splice(0, 9)
   }
 
+  // Получение вопросов
   getQuestions(
     type: string,
     setQuestions: Dispatch<SetStateAction<question[] | []>>
@@ -27,17 +29,20 @@ class TestsService {
     if (type === 'js') {
       return setQuestions(this.shuffle(testQuestionsJS))
     }
-    if (type === 'next') {
-      return setQuestions(this.shuffle(testQuestionsNext))
+    if (type === 'ts') {
+      return setQuestions(this.shuffle(testQuestionsTS))
     }
     if (type === 'react') {
       return setQuestions(this.shuffle(testQuestionsReact))
     }
   }
+
+  // сохранение ответов в локальное хранилище
   setAnswers(answers: answerI[]) {
-    window.localStorage.setItem('answers', JSON.stringify(answers))
+    localStorage.setItem('answers', JSON.stringify(answers))
   }
 
+  // подсчет верных ответов
   calcTrueAnswers(answers: answerI[]): number {
     let trueAnswers = 0
     answers.map(answer => {
@@ -47,6 +52,8 @@ class TestsService {
     })
     return trueAnswers
   }
+
+  // генерация фразы по количеству верных ответов
   phraseGen(trueAnswers: number) {
     if (trueAnswers <= 3) {
       return 'Тебе стоит повторить базовые знания и вернутся позже.'

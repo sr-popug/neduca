@@ -14,7 +14,7 @@ interface page {
   link: Url
   Img: ForwardRefExoticComponent<Omit<LucideProps, 'ref'>>
   description: String
-  pages: subpage[]
+  pages?: subpage[]
 }
 interface subpage {
   title: String
@@ -28,27 +28,27 @@ interface group {
 }
 
 const pagesConfig: group[] = [
-  //   {
-  //     groupName: 'Сообщество',
-  //     elements: [
-  //       {
-  //         name: 'news',
-  //         title: 'Новости',
-  //         description:
-  //           'Новости нашего проекта, JavaScript, а также касающихся его фреймворков',
-  //         link: '/news',
-  //         Img: '/images/news-icon.svg',
-  //       },
-  //       {
-  //         name: 'rating',
-  //         title: 'Рейтинги',
-  //         description:
-  //           'Самые активные пользователи нашего сайта во всех категориях',
-  //         link: '/rating',
-  //         Img: '/images/rating-icon.svg',
-  //       },
-  //     ],
-  //   },
+  // {
+  //   groupName: 'Сообщество',
+  //   elements: [
+  //     {
+  //       name: 'news',
+  //       title: 'Новости',
+  //       description:
+  //         'Новости нашего проекта, JavaScript, а также касающихся его фреймворков',
+  //       link: '/news',
+  //       Img: Newspaper,
+  //     },
+  //     {
+  //       name: 'rating',
+  //       title: 'Рейтинги',
+  //       description:
+  //         'Самые активные пользователи нашего сайта во всех категориях',
+  //       link: '/rating',
+  //       Img: Star,
+  //     },
+  //   ],
+  // },
   {
     groupName: 'Обучение',
     elements: [

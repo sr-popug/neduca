@@ -72,31 +72,37 @@
   .keyboard {
     width: 73rem;
     margin: 5rem auto;
+    display: grid;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
     .button {
       min-width: 5rem;
       height: 5rem;
-      border-radius: 20px;
-      border: 2px solid #818181;
+      border-radius: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
 
       font-size: 2rem;
-      color: #818181;
+      color: #ffffff;
       text-transform: uppercase;
+
       &.active {
-        color: #ff4c2b;
-        border-color: #ff4c2b;
+        background-color: #ff4c2b !important;
+        font-weight: 800;
       }
       &.Space {
         width: 46rem;
+        margin-left: 10rem;
       }
       &.ShiftLeft {
-        padding: 2.5rem;
+        padding: 0 1.6rem;
+
+        margin-left: -40px;
+      }
+      &.KeyA {
+        margin-left: 2rem;
       }
     }
   }

@@ -30,6 +30,13 @@
     font-size: 2rem;
     text-align: justify;
     text-align: center;
+    span {
+      background-color: #05121d;
+      border-radius: 5px;
+      padding: 2px 5px;
+
+      font-family: Consolas;
+    }
   }
 
   form {

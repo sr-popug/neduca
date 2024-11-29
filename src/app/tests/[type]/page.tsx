@@ -104,9 +104,12 @@ export default function Test() {
           <div key={i} className='dote not-done'></div>
         ))}
       </article>
-      <article className='question'>
-        {questions[nowQuestion] && questions[nowQuestion].quest}
-      </article>
+      {questions[nowQuestion] && (
+        <article
+          dangerouslySetInnerHTML={{ __html: questions[nowQuestion].quest }}
+          className='question'
+        ></article>
+      )}
       {questions[nowQuestion] && questions[nowQuestion].code && (
         <CodeBlock node={questions[nowQuestion].code} />
       )}

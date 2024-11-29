@@ -150,6 +150,8 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      justify-content: center;
+      width: 49%;
 
       height: 50px;
       padding: 1rem 3rem;
@@ -164,6 +166,7 @@
       border-radius: 2rem;
       background-color: #081826;
       transition: all 0.3s ease;
+
       cursor: pointer;
       &.active {
         border-color: #ff4c2b;

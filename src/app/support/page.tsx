@@ -16,8 +16,8 @@ export default function SupportPage() {
         <ol>
           <li>
             Не следует изменять исходную функцию в{' '}
-            <span>function declaration</span> на <span>array function</span> -
-            это неизбежно приведёт к ошибкам
+            <span>function declaration</span> на <span>array function</span> или{' '}
+            <span>function expression</span> - это неизбежно приведёт к ошибкам
           </li>
           <li>Функция должна возвращать какое либо значение</li>
           <li>Весь ваш код должен быть внутри изначальной функции</li>

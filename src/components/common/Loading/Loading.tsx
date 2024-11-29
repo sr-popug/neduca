@@ -7,6 +7,12 @@ export default function Loading() {
       <div>
         <Loader2 width={100} height={100} className='image-loader' />
         <p>Загрузка...</p>
+        <button
+          onClick={() => window.location.reload()}
+          className='reload-page'
+        >
+          Перезагрузить страницу
+        </button>
       </div>
     </article>
   )
