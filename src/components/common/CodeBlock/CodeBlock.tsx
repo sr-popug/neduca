@@ -1,16 +1,15 @@
 'use client'
 
-import hljs from 'highlight.js'
 import 'highlight.js/styles/base16/isotope.min.css'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import './codeBlock.scss'
 
 export default function CodeBlock({ node }: { node: string }) {
   const code = useRef<HTMLElement>(null)
-  useEffect(() => {
-    code.current && (code.current.dataset.highlighted = '')
-    code.current && hljs.highlightBlock(code.current)
-  }, [node])
+  // useEffect(() => {
+  //   code.current && (code.current.dataset.highlighted = '')
+  //   code.current && hljs.highlightElement(code.current)
+  // }, [node])
 
   return (
     <article className='code'>
