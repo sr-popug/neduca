@@ -6,6 +6,6 @@ const nextConfig = {
     // See: https://github.com/polkadot-js/api/issues/5636
     '@polkadot',
   ],
-}
+  }
 
 export default nextConfig
